@@ -1,6 +1,6 @@
 import { compareSync, hashSync } from "bcrypt";
 import { RequestHandler } from "express";
-import db from "../../dbConfig";
+import db from "../../db/dbConfig";
 import AppError from "../../utils/appError";
 import { catchAsync, responseHandler } from "../../utils/catchAsync";
 import { createToken } from "../../utils/token";

@@ -13,11 +13,12 @@ const dbConfig: IKnexConfig  = {
       host : '127.0.0.1',
       port : 3306,
       user : 'root',
-      password : 'M@vorion123',
-      database : 'sequelize_learn'
+      password : 'Password@123',
+      database : 'sql_learn'
     },
+    useNullAsDefault: true,
     migrations:{
-      directory: path.join(__dirname, 'migrations')
+      directory: path.join(__dirname, './db/migrations')
     }
   },
 

@@ -1,6 +1,6 @@
 import { RequestHandler } from "express";
 import { JsonWebTokenError } from "jsonwebtoken";
-import db from "../dbConfig";
+import db from "../db/dbConfig";
 import AppError from "../utils/appError";
 import { catchAsync } from "../utils/catchAsync";
 import Token from "../utils/interface/token.interface";
