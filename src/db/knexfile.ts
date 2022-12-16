@@ -18,7 +18,7 @@ const dbConfig: IKnexConfig  = {
     },
     useNullAsDefault: true,
     migrations:{
-      directory: path.join(__dirname, './db/migrations')
+      directory: path.join(__dirname, './migrations')
     }
   },
 
