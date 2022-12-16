@@ -2,6 +2,9 @@ import type { Knex } from "knex";
 import path from "path";
 
 // Update with your config settings.
+
+
+// knex migrate:make migration_name --migrations-directory src/db/migrations -x ts
 interface IKnexConfig { 
   [key: string]: Knex.Config, 
 }
