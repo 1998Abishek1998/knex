@@ -4,7 +4,14 @@ import path from "path";
 // Update with your config settings.
 
 
+// Create new migration
 // knex migrate:make migration_name --migrations-directory src/db/migrations -x ts
+
+
+// migration up or down 
+// knex migrate:{down/up} --knexfile src/db/migrations/{migration_filename}
+
+
 interface IKnexConfig { 
   [key: string]: Knex.Config, 
 }
@@ -21,7 +28,7 @@ const dbConfig: IKnexConfig  = {
     },
     useNullAsDefault: true,
     migrations:{
-      directory: path.join(__dirname, './migrations')
+      directory: path.join(__dirname, 'migrations')
     }
   },
 
