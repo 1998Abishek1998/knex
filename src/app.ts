@@ -6,7 +6,6 @@ import compression from "compression";
 
 import AppRouter from "./utils/interface/appRouter.interface";
 import { errorMiddleware } from "./middleware/error.middleware";
-// import connection from "./dbConfig";
 import AppError from "./utils/appError";
 
 
@@ -18,7 +17,6 @@ class App {
         this.express = express()
         this.port = port
         
-        this.initializeDBConnection()
         this.initializeMiddleware()
         this.initializeRouters(routers)
         this.initializeErrorHandling()
@@ -44,14 +42,6 @@ class App {
             next(new AppError(404, `Can't find ${req.originalUrl} on this server!`));
         })
         this.express.use(errorMiddleware)
-    }
-
-    private initializeDBConnection(): void{
-        // connection.sync().then(() => {
-        //     console.log('Db Connected')
-        // }).catch((err) => {
-        //     console.log(err,' Error -_-')
-        // })
     }
 
     public listen(): void{

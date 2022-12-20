@@ -13,7 +13,7 @@ export const authenticated: RequestHandler = catchAsync(async (req, res,next) =>
 
     const payload: Token | JsonWebTokenError = await verifyToken(accessToken)
     if(payload instanceof JsonWebTokenError) return next(new AppError(401, 'Unauthorized'))
-    const user = await db('person').where('id', payload.id)
+    const user = await db('user').where('id', payload.id)
     if(user.length < 1) return next(new AppError(404, 'User not encrypted with this id'))
     req.user = user[0]
     next()
