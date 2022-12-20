@@ -1,7 +1,7 @@
 import 'dotenv/config'
 import App from './app'
 import LocationRouter from './resources/location/location.route'
-import PersonRouter from './resources/person/person.route'
+import PersonRouter from './resources/user/user.route'
 import { validateEnv } from './utils/validateEnv'
 
 validateEnv()

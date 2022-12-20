@@ -1,4 +1,4 @@
-import { IPerson } from "../resources/person/person.interface";
+import { IPerson } from "../resources/user/user.interface";
 
 declare global {
     namespace Express {

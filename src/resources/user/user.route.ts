@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { authenticated } from "../../middleware/jwt.middleware";
 import AppRouter from "../../utils/interface/appRouter.interface";
-import { addPerson, createPerson, GetPerson, loginPerson } from "./person.controller";
+import { addPerson, createPerson, GetPerson, loginPerson } from "./user.controller";
 
 class PersonRouter implements AppRouter{
     public path = '/person'

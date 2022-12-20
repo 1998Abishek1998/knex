@@ -18,18 +18,30 @@ interface IKnexConfig {
 
 const dbConfig: IKnexConfig  = {
   development: {
-    client: 'mysql2',
+    client: 'pg',
     connection: {
       host : '127.0.0.1',
-      port : 3306,
-      user : 'root',
+      port : 5432,
+      user : 'abishek',
       password : 'Password@123',
-      database : 'sql_learn'
+      database : 'knex'
     },
     useNullAsDefault: true,
     migrations:{
       directory: path.join(__dirname, 'migrations')
-    }
+    },
+    // client: 'mysql2',
+    // connection: {
+    //   host : '127.0.0.1',
+    //   port : 3306,
+    //   user : 'root',
+    //   password : 'Password@123',
+    //   database : 'sql_learn'
+    // },
+    // useNullAsDefault: true,
+    // migrations:{
+    //   directory: path.join(__dirname, 'migrations')
+    // }
   },
 
   staging: {

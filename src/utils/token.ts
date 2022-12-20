@@ -1,8 +1,8 @@
 import { Secret, sign, verify, VerifyErrors } from "jsonwebtoken";
-import { IPerson } from "../resources/person/person.interface";
+import { IUser } from "../resources/user/user.interface";
 import Token from "./interface/token.interface";
 
-export const createToken = (user: IPerson): string => {
+export const createToken = (user: IUser): string => {
     return sign(
         {
             id: user.id,

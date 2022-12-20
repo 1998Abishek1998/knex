@@ -10,7 +10,7 @@
     "knex:migratelatest": "knex migrate:latest --knexfile src/db/knexfile.ts",
     "build": "tsc",
     "postinstall": "npm run build",
-    "migrate":"npx knex migrate:latest --knexfile src/knexfile.ts"
+    "migrate": "npx knex migrate:latest --knexfile src/db/knexfile.ts"
   },
   "keywords": [],
   "author": "",
@@ -27,7 +27,8 @@
     "jsonwebtoken": "^8.5.1",
     "knex": "^2.3.0",
     "morgan": "^1.10.0",
-    "mysql2": "^2.3.3"
+    "mysql2": "^2.3.3",
+    "pg": "^8.8.0"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",

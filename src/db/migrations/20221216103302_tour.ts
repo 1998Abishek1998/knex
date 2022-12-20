@@ -1,9 +1,8 @@
 import { Knex } from "knex";
 
-
 export async function up(knex: Knex): Promise<void> {
     return knex.schema.createTable('tour',table => {
-        table.uuid('id').primary().notNullable().unique().defaultTo(knex.raw("(UUID())"))
+        table.uuid('id').primary().notNullable().unique()
         table.string('name').notNullable().unique()
         table.integer('duration').notNullable()
         table.integer('max_group_size').notNullable()
@@ -22,8 +21,6 @@ export async function up(knex: Knex): Promise<void> {
     })
 }
 
-
 export async function down(knex: Knex): Promise<void> {
     return knex.schema.dropTable('tour')
 }
-
